@@ -9,6 +9,6 @@ WORKDIR /app
 RUN make && make install
 RUN apt-get remove -y wget make gcc
 
-CMD /usr/local/bin/webdis /etc/webdis.prod.json 
+CMD /usr/local/bin/webdis webdis.docker.json 
 
 EXPOSE 7379
