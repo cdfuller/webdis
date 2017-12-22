@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+  webdis:
+    build: .
+    ports:
+      - 7379:7379
+    depends_on:
+      - redis
+    command: webdis /etc/webdis.prod.json
+    # command: tail /var/log/webdis.log & webdis /etc/webdis.prod.json
+    labels:
+      - traefik.frontend.rule=Host:webdis.next.health
+      - traefik.port=7379

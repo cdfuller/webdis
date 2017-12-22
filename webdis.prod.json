@@ -1,5 +1,5 @@
 {
-	"redis_host":	"127.0.0.1",
+	"redis_host":	"redis",
 
 	"redis_port":	6379,
 	"redis_auth":	null,
@@ -8,7 +8,7 @@
 	"http_port":	7379,
 	"threads":	4,
 
-	"daemonize":	true,
+	"daemonize":	false,
 
 	"database":	0,
 
@@ -23,6 +23,6 @@
 		}
 	],
 
-        "verbosity": 3,
+        "verbosity": 1,
         "logfile": "/var/log/webdis.log"
 }
